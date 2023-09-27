@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+@layer components {
+    .navbar{
+        @apply bg-white flex items-center justify-between px-4 py-4
+    }
+    .shop-button{
+        @apply p-8 px-9 bg-[--primary-color] rounded-full absolute -right-[78px] -top-20 transform -translate-x-1/2;
+    }
+    .shop-button::after{
+        content:'';
+        @apply p-12 scale-110 rounded-full bg-[--primary-color] opacity-50 absolute -top-1 -z-10 -left-1
+    }
+    .shop-button:hover{
+        @apply scale-110
+    }
+}
