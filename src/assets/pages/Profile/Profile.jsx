@@ -1,18 +1,8 @@
-import React, { useRef } from 'react';
 import TopNav from "../../components/TopNav/TopNav";
 import ProfileLabel from "./Labels/ProfileLabel";
 import { Button } from "primereact/button";
-import { Toast } from 'primereact/toast';
+import { Avatar } from "primereact/avatar";
 export default function Profile() {
-  const toast = useRef(null);
-
-  const show = () => {
-    toast.current.show({
-      severity: "info",
-      summary: "Info",
-      detail: "Message Content",
-    });
-  };
   const roles = [{ name: "Supervisor" }];
   const branches = [{ name: "Lisunova Korzinka" }];
   const language = [
@@ -23,6 +13,18 @@ export default function Profile() {
     <div className="">
       <TopNav title="Profile" />
       <div className="p-5">
+        {/* Profile Photo */}
+        <div className="p-10 flex items-center justify-center">
+          <div className="relative">
+            <Avatar
+              image="https://source.unsplash.com/random"
+              size="xlarge"
+              shape="circle"
+            />
+            <i className="pi pi-camera" style={{color: '#779CFF', fontSize: '1.3rem'}}></i>
+          </div>
+        </div>
+        {/* Profile Photo */}
         <ProfileLabel
           labelName="Firstname"
           inputValue="James"
@@ -58,18 +60,12 @@ export default function Profile() {
         />
         <ProfileLabel
           labelName="Language"
-          roundedTop
+          rounded
           dropdownTrue
           opts={language}
         />
-        <div className="mx-auto my-5">
-          <Toast ref={toast} />
-          <Button
-            severity="success"
-            icon="pi pi-check"
-            onClick={show}
-            label="Save"
-          />
+        <div className="rounded-b-xl py-2 bg-white">
+          <Button severity="success" icon="pi pi-check" label="Save" text />
         </div>
       </div>
     </div>
