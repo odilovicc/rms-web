@@ -27,14 +27,11 @@ export default function Navbar() {
     <div className="navbar">
       <NavLink {...overviewLink} unactive />
       <NavLink {...transactionsLink} unactive />
-      <div className="mx-12 relative">
-        <a
-          href="#"
-          className="shop-button"
-        >
+      <div className="px-10"></div>
+        <a href="#" className="shop-button">
           <i className="scale-150 text-white pi pi-shopping-cart"></i>
         </a>
-      </div>{" "}
+      {" "}
       <NavLink {...homeLink} unactive />
       <NavLink {...settingsLink} />
     </div>

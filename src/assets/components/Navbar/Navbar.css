@@ -3,17 +3,19 @@
 @tailwind utilities;
 @tailwind variants;
 @layer components {
-    .navbar{
-        @apply bg-white flex items-center justify-between px-4 py-4
+    .navbar {
+        @apply bg-white flex gap-5 justify-center items-center p-2 relative;
     }
-    .shop-button{
-        @apply p-8 px-9 bg-[--primary-color] rounded-full absolute -right-[78px] -top-20 transform -translate-x-1/2;
+
+    .shop-button {
+        box-shadow: 0 0 0 10px #A9C0FF;
+        @apply p-7 px-8 bg-[#613EEA] rounded-full absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-25%, -100%);
     }
-    .shop-button::after{
-        content:'';
-        @apply p-12 scale-110 rounded-full bg-[--primary-color] opacity-50 absolute -top-1 -z-10 -left-1
-    }
-    .shop-button:hover{
-        @apply scale-110
+
+    .shop-button:hover {
+        @apply scale-110;
     }
 }
