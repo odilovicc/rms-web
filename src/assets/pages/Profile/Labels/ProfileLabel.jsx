@@ -36,7 +36,7 @@ export default function ProfileLabel(props) {
           />
         </div>
         <div className={`${textTrue ? "block w-full" : "hidden"}`}>
-            <CustomInput value={props.inputValue} />
+          <CustomInput value={props.inputValue} />
         </div>
         <div className={`${passTrue ? "block w-full" : "hidden"}`}>
           <Password

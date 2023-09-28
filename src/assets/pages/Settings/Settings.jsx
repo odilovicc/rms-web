@@ -6,7 +6,11 @@ export default function Settings() {
         <div className="p-5">
             <Link to="/profile">
                 <div className={`px-4 py-2 flex items-center gap-5 bg-white rounded-xl`}>
-                    <Avatar image="https://source.unsplash.com/random" size="normal"/>
+                    <Avatar image="https://source.unsplash.com/random" size="normal" pt={{
+                        image: {
+                            className: 'rounded-xl'
+                        }
+                    }}/>
                     <h1>Profile</h1>
                     <i className="ml-auto pi pi-arrow-right opacity-25"></i>
                 </div>

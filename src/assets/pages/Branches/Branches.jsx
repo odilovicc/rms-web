@@ -1,28 +1,65 @@
-import React from "react";
+
+import React, { useState } from "react";
+import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import TopNav from "../../components/TopNav/TopNav";
-import { createAndAppendDiv } from "./createBranch";
+import Branch from "./Labels/Branch";
 
 export default function Branches() {
-  const handleInputSubmit = (inputValue) => {
-    const newDiv = createAndAppendDiv(inputValue);
-    const containerDiv = document.getElementById("appearDiv");
-    if (containerDiv) {
-      containerDiv.appendChild(newDiv);
-    }
+  const [branches, setBranches] = useState([
+    { id: 1, name: "Lisunova Korzinka" },
+    { id: 2, name: "Drujba Texnopark" },
+    { id: 3, name: "Fayzobod Gai" },
+  ]);
+
+  const handleDragEnd = (result) => {
+    if (!result.destination) return;
+
+    const { source, destination } = result;
+    const newBranches = Array.from(branches);
+    const [movedBranch] = newBranches.splice(source.index, 1);
+    newBranches.splice(destination.index, 0, movedBranch);
+
+    setBranches(newBranches);
   };
 
   return (
     <div>
       <TopNav
         title="Branches"
-        handleInputSubmit={handleInputSubmit}
         addButton
         titleDialog="Branch"
         labelName="Name"
         buttonSuccess="Save"
         buttonDanger="Cancel"
       />
-      <div id="appearDiv" className="px-5 flex flex-col gap-2"></div>
+      <section className="p-2 mt-9">
+        <DragDropContext onDragEnd={handleDragEnd}>
+          <Droppable droppableId="branches">
+            {(provided) => (
+              <div {...provided.droppableProps} ref={provided.innerRef}>
+                {branches.map((branch, index) => (
+                  <Draggable key={branch.id} draggableId={branch.id.toString()} index={index}>
+                    {(provided) => (
+                      <div
+                        {...provided.draggableProps}
+                        {...provided.dragHandleProps}
+                        ref={provided.innerRef}
+                      >
+                        <Branch
+                          rTop={index === 0}
+                          rBottom={index === branches.length - 1}
+                          name={branch.name}
+                        />
+                      </div>
+                    )}
+                  </Draggable>
+                ))}
+                {provided.placeholder}
+              </div>
+            )}
+          </Droppable>
+        </DragDropContext>
+      </section>
     </div>
   );
 }
