@@ -27,7 +27,7 @@ export default function Navbar() {
     <div className="navbar">
       <NavLink {...overviewLink} unactive />
       <NavLink {...transactionsLink} unactive />
-      <div className="px-10"></div>
+      <div className="px-9"></div>
         <a href="#" className="shop-button">
           <i className="scale-150 text-white pi pi-shopping-cart"></i>
         </a>
