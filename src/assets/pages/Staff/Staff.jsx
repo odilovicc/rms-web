@@ -1,6 +1,5 @@
 import TopNav from "../../components/TopNav/TopNav";
 import { Button } from "primereact/button";
-import { Divider } from "primereact/divider";
 import { Avatar } from "primereact/avatar";
 export default function Staff() {
   return (

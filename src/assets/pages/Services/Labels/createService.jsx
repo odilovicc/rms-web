@@ -2,17 +2,8 @@ import React, { useRef } from 'react';
 import ServiceLabel from "./ServiceLabel";
 import TopNav from '../../../components/TopNav/TopNav';
 import { Button } from "primereact/button";
-import { Toast } from 'primereact/toast';
 export default function createService() {
-  const toast = useRef(null);
 
-  const show = () => {
-    toast.current.show({
-      severity: "success",
-      summary: "Successfull",
-      detail: "Added successfully",
-    });
-  };
   const roles = [{ name: "Supervisor" }];
   const branches = [{ name: "Lisunova Korzinka" }];
   const language = [
@@ -58,17 +49,16 @@ export default function createService() {
         />
         <ServiceLabel
           labelName="Language"
-          roundedTop
+          rounded
           dropdownTrue
           opts={language}
         />
-        <div className="mx-auto my-5">
-          <Toast ref={toast} />
+        <div className="mx-auto bg-white rounded-b-xl">
           <Button
             severity="success"
             icon="pi pi-check"
-            onClick={show}
             label="Save"
+            text
           />
         </div>
       </div>

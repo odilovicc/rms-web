@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import CustomInput from "../../../components/Input/CustomInput";
 import CustomDropdown from "../../../components/Dropdown/CustomDropdown";
-import { Password } from "primereact/password";
+import CustomPassword from "../../../components/Password/CustomPassword";
 
 export default function ProfileLabel(props) {
   const {
@@ -40,7 +40,7 @@ export default function ProfileLabel(props) {
           <CustomInput value={props.inputValue} />
         </div>
         <div className={`${passTrue ? "block" : "hidden"}`}>
-          <Password
+          <CustomPassword
             value={value}
             onChange={(e) => setValue(e.target.value)}
             feedback={false}

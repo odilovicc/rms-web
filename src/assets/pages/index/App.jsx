@@ -10,8 +10,6 @@ import "./App.css";
 function App() {
   return (
     <div className="mainContainer">
-      {/* <Settings/> */}
-      {/* <Profile></Profile> */}
       <Router>
         <Routes>
           <Route exact path="/" element={<Settings/> }/>

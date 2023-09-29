@@ -14,8 +14,4 @@
         left: 50%;
         transform: translate(-25%, -100%);
     }
-
-    .shop-button:hover {
-        @apply scale-110;
-    }
 }

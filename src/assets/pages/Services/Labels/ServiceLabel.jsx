@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { InputText } from "primereact/inputtext";
+import CustomInput from "../../../components/Input/CustomInput";
 import { Dropdown } from "primereact/dropdown";
-import { Password } from "primereact/password";
+import CustomPassword from "../../../components/Password/CustomPassword";
 export default function ServiceLabel(props) {
   const {
     rounded,
@@ -16,7 +16,7 @@ export default function ServiceLabel(props) {
   return (
     <div>
         <div
-          className={`px-6 py-4 flex justify-between items-center gap-5 bg-white ${
+          className={`px-4 py-2 flex justify-between items-center gap-5 bg-white ${
             rounded ? "rounded-none" : "rounded-2xl"
           } ${roundedBottom ? "rounded-b-none" : "rounded-2xl"} ${
             roundedTop ? "rounded-t-none" : "rounded-2xl"
@@ -35,10 +35,10 @@ export default function ServiceLabel(props) {
             />
           </div>    
           <div className={`${textTrue ? "block" : "hidden"}`}>
-            <InputText value={props.inputValue} />
+            <CustomInput value={props.inputValue} />
           </div>
           <div className={`${passTrue ? "block" : "hidden"}`}>
-            <Password
+            <CustomPassword
               value={value}
               onChange={(e) => setValue(e.target.value)}
               feedback={false}
