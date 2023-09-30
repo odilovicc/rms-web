@@ -4,7 +4,7 @@ import Branches from "../Branches/Branches";
 import Staff from "../Staff/Staff";
 import CreateStaff from '../Staff/page/CreateStaff'
 import Services from '../Services/Services'
-import CreateService from '../Services/Labels/createService'
+import CreateService from '../Services/Labels/CreateService'
 import { BrowserRouter as Router,Route, Routes } from 'react-router-dom'
 import "./App.css";
 function App() {
