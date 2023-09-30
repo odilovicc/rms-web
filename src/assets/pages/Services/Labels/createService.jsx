@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import ServiceLabel from "./ServiceLabel";
 import TopNav from '../../../components/TopNav/TopNav';
 import { Button } from "primereact/button";
-export default function createService() {
+export default function CreateService() {
 
   const roles = [{ name: "Supervisor" }];
   const branches = [{ name: "Lisunova Korzinka" }];
