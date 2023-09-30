@@ -1,6 +1,8 @@
 import TopNav from "../../components/TopNav/TopNav";
 import { Button } from "primereact/button";
 import { Avatar } from "primereact/avatar";
+import { BrowserRouter as Router,Route,Link, Routes } from 'react-router-dom'
+
 export default function Services() {
   return (
     <div>
@@ -8,9 +10,9 @@ export default function Services() {
         <div className="w-full">
           <TopNav title="Services" />
         </div>
-        <a href="/services/create">
+        <Link to="/services/create">
           <Button icon="pi pi-plus" text />
-        </a>
+        </Link>
       </div>
       <section className="p-5 flex flex-col gap-5">
         <section className="rounded-xl bg-white p-3" id="owner">

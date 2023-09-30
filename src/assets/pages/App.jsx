@@ -13,13 +13,13 @@ function App() {
       <Router>
         <Routes>
           <Route exact path="/" element={<Settings/> }/>
-          <Route exact path="/profile" element={<Profile/> }/>
-          <Route exact path="/branches" element={<Branches/> }/>
-          <Route exact path="/staff" element={<Staff/> }/>
-          <Route exact path="/staff" element={<Staff/> }/>
-          <Route exact path="/staff/create" element={<CreateStaff/> }/>
-          <Route exact path="/services" element={<Services/> }/>
-          <Route exact path="/services/create" element={<CreateService/> }/>
+          <Route path="/profile" element={<Profile/> }/>
+          <Route path="/branches" element={<Branches/> }/>
+          <Route path="/staff" element={<Staff/> }/>
+          <Route path="/staff" element={<Staff/> }/>
+          <Route path="/staff/create" element={<CreateStaff/> }/>
+          <Route path="/services" element={<Services/> }/>
+          <Route path="/services/create" element={<CreateService/> }/>
         </Routes>
       </Router>
     </div>
