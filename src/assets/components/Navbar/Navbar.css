@@ -4,7 +4,7 @@
 @tailwind variants;
 @layer components {
     .navbar {
-        @apply bg-white flex gap-5 justify-center items-center p-2 mt-20 relative;
+        @apply bg-white flex rounded-t-xl gap-5 justify-center items-center p-2 mt-20 relative;
     }
 
     .shop-button {
