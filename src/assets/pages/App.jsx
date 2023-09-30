@@ -1,10 +1,10 @@
-import Settings from "../Settings/Settings";
-import Profile from "../Profile/Profile";
-import Branches from "../Branches/Branches";
-import Staff from "../Staff/Staff";
-import CreateStaff from '../Staff/page/CreateStaff'
-import Services from '../Services/Services'
-import CreateService from "../Services/Labels/CreateService"
+import Settings from "./Settings/Settings.jsx";
+import Profile from "./Profile/Profile.jsx";
+import Branches from "./Branches/Branches.jsx";
+import Staff from "./Staff/Staff.jsx";
+import CreateStaff from './Staff/page/CreateStaff.jsx'
+import Services from './Services/Services.jsx'
+import CreateService from "./Services/Labels/CreateService.jsx"
 import { BrowserRouter as Router,Route, Routes } from 'react-router-dom'
 import "./App.css";
 function App() {
